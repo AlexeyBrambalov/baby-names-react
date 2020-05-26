@@ -1,0 +1,38 @@
+.NameList{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 4px solid;
+    border-color: #F8BBD0 #90CAF9 #90CAF9 #F8BBD0 ;
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    padding: 10px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.f/*female*/{
+    background-color: #F8BBD0;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 2px;
+    color: #C2185B;
+    font-weight: bold;
+    margin: 5px;
+    font-size: 18px;
+    padding: 2px 8px; 
+  }
+  
+  .m/*male*/{
+    background-color: #90CAF9;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 2px;
+    color: #0D47A1;
+    font-weight: bold;
+    margin: 5px;
+    font-size: 18px;
+    padding: 2px 8px; 
+  }
