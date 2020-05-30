@@ -36,3 +36,48 @@
     font-size: 18px;
     padding: 2px 8px; 
   }
+
+  .input-container{
+    width:  100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+  }
+  .favoritenames,
+  .selectgender{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .all{
+    background-color: grey;
+  }
+
+  .male{
+    background-color: lightblue;
+  }
+
+  .female{
+    background-color: lightpink;
+  }
+
+  .all,
+  .male,
+  .female{
+    margin: 10px ;
+    padding: 5px;
+  }
+  
+
+  .favoritenames{
+    flex-wrap: wrap;
+    width: 50%;
+    margin: auto;
+
+  }
