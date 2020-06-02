@@ -18,6 +18,7 @@ export default function SelectGender({selectGender, setSelectGender}) {
                 type="radio"
                 value="m"
                 name="gender"
+                checked={selectGender === "m"}
                 onChange={(e) => setSelectGender(e.target.value)}
                 />
             </div>
@@ -26,6 +27,7 @@ export default function SelectGender({selectGender, setSelectGender}) {
                 type="radio"
                 value="f"
                 name="gender"
+                checked={selectGender === "f"}
                 onChange={(e) => setSelectGender(e.target.value)}
                 />
             </div>

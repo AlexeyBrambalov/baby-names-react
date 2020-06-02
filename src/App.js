@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import NameList from "./components/NameList"
 import babyNamesData from './data/babyNamesData.json'
 import SearchInput from './components/SearchInput'
@@ -8,18 +8,32 @@ import SelectGender from './components/SelectGender';
 import FavoriteNames from './components/FavoriteNames';
 
 const  App = () => {
+  let filtedData = babyNamesData.sort((a, b) => a.name.localeCompare(b.name))
 
-  babyNamesData.sort((a, b) => a.name.localeCompare(b.name))
+  const initalGender = () => (window.localStorage.getItem('selectGender') || "")
+
+  const initalFavoriteNames = () => ( JSON.parse(window.localStorage.getItem('favoriteNames')) || [ ])
+
+
 
   const [search, setSearch] = useState("");
 
-  const [selectGender, setSelectGender] = useState("");
+  const [selectGender, setSelectGender] = useState(initalGender);
 
-  const [favoriteNames, setFavoriteNames] = useState([]);
+  const [favoriteNames, setFavoriteNames] = useState(initalFavoriteNames);
 
-  let filtedData = babyNamesData
+  useEffect( ()=>{
+    window.localStorage.setItem('selectGender', selectGender)
+  }, [selectGender])
 
+  useEffect( ()=>{
+    window.localStorage.setItem('favoriteNames', JSON.stringify(favoriteNames))
+ 
+    
+    
+  }, [favoriteNames])
 
+  
 
 
   if(selectGender === "f" || selectGender === "m"){ filtedData = babyNamesData.filter(baby => baby.sex === selectGender)}

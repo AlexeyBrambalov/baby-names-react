@@ -6,6 +6,7 @@ export default function SearchInput({search, setSearch}) {
             <input className="searchinput"
             placeholder="Search by name"
             onChange={(e) => setSearch(e.target.value)}
+           value= {search}
             />
         </div>
     )
